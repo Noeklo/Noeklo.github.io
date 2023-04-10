@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Registrering</title>
+</head>
+<body>
+    <div id="login_box1">
+        <h2>Registrering</h1>
+        <input type="text" name="" id="username" placeholder="Användarnamn">
+        <input type="password" id="password" placeholder="Lösenord">
+        <input type="password" id="password2" placeholder="Upprepa lösenord">
+        <div id="error"></div>
+        <input type="button" value="Reggistrera dig" onclick="Registrate()">
+        <p>Har du redan ett konto?</p>
+        <input type="button" value="Logga in" onclick="RedirectToLoggin()">
+    </div> 
+</body>
+<script>
+    function RedirectToLoggin(){
+        window.location.href = "index.html";
+    }
+
+    function Registrate(){
+        var password1 = document.getElementById("password").value;
+        var password2 = document.getElementById("password2").value;
+        var user = document.getElementById("username").value;
+        
+
+        if (localStorage.getItem(user) == null){
+            if (password1 == password2){
+                localStorage.setItem(user, password1);
+                window.location.href = "home.html";
+            }
+            else{
+                document.getElementById("error").innerHTML = "Lösenorden överstämmer inte.";
+        }
+        }
+        else{
+            document.getElementById("error").innerHTML = "Kontot existerar redan."
+        }
+    }
+</script>
+</html>
