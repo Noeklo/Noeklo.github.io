@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <script src="https://kit.fontawesome.com/1d58182547.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -7,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css"> 
-    <title>Organiska kemi</title>
+    <title>Noels Sida</title>
 </head>
 <body>
     <nav id="box1">
@@ -15,13 +14,13 @@
             <li class="odd" style="font-size: x-large; border-bottom: transparent; box-shadow: none; "><a href="home.html">Home</a></li>
             <li class="even"><a href="2.html">2</a></li>
             <li class="odd"><a href="3.html">3</a></li>
-            <li class="even"><a href="#">4</a></li>
+            <li class="even"><a href="4.html">4</a></li>
         </ul>
 
-        <div id="menu"><a href="#" onclick="openNav()"><i class="fa-solid fa-bars" ></i></a></div>
+        <div id="menu1" class="menu"><a href="#" onclick="openNav()"><i class="fa-solid fa-bars" ></i></a></div>
     </nav>        
     <nav id="side-nav">
-        <div id="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
+        <div id="menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
         <div id="logout"><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logga ut</a></div>
     </nav>
     <div id="box2">
@@ -30,20 +29,15 @@
     </div>
 </body>
 <script>
-    // $(document).ready(function(){
-    //     $("#menu").click(function(){
-    //         alert("hej")
-    //         $("#side-nav").animate({right: '250px'}, "slow");
-    //     })
-    // });
-    function openNav(){
-        document.getElementById("side-nav").style.borderLeft = "solid black 2px";
-        document.getElementById("side-nav").style.width = "200px"; 
-    }
-
-    function closeNav(){
-        document.getElementById("side-nav").style.width = "0";
-        document.getElementById("side-nav").style.borderLeft = "solid black 2px";
-    }
+    $(document).ready(function(){
+    $("#menu1").click(function(){
+        $("#side-nav").animate({right: '0px'}, 200);
+    });
+    });  
+    $(document).ready(function(){
+    $("#menu2").click(function(){
+        $("#side-nav").animate({right: '-201px'}, 200);
+    });
+    });  
 </script>
 </html>
