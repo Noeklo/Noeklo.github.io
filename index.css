@@ -8,8 +8,10 @@ body{
 
 #myBtn {
     display: none;
-    margin-left: 50%;
-    margin-right: 50%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 5px;
     width: 100px;
     position: fixed;
@@ -20,6 +22,7 @@ body{
     color: white;
     cursor: pointer;
     border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 1.95px 1.95px 2.6px;
 }
 
 a{
