@@ -9,6 +9,9 @@
     <title>Noels Sida</title>
 </head>
 <body>
+
+    <button onclick="topFunction()" id="myBtn">Back to Top</button>
+
     <nav id="box1">
         <ul>
             <li class="odd" style="font-size: x-large; border-bottom: transparent; box-shadow: none; "><a href="home.html">Home</a></li>
@@ -39,5 +42,22 @@
         $("#side-nav").animate({right: '-201px'}, 200);
     });
     });  
+    
+    var mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
 </script>
 </html>
