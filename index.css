@@ -67,6 +67,7 @@ ul li {
     float: left;
     background-color: white;
     transform: skew(12deg);
+    position: relative;
     /* box-shadow: inset 0px -2px 6px 0px rgba(0, 0, 0, 0.23); */
 }
 
@@ -147,12 +148,26 @@ i{
     border: solid rgba(0, 0, 0, 0.271) 1px;
 }
 
-#content2 {
+#content1{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 30px;
+    gap: 20px;
+}
+
+#item1{
     width: 400px;
     height: 400px;
     border: solid  rgb(124, 0, 0) 4px;
     border-radius: 25px;
-    margin: 30px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#item2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border: solid black 2px;
 }
 /* inloggning */
 #login_box1 {
