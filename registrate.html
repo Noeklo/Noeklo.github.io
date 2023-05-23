@@ -33,6 +33,7 @@
         if (localStorage.getItem(user) == null){
             if (password1 == password2){
                 localStorage.setItem(user, password1);
+                alert("Registrering lyckades!")
                 window.location.href = "home.html";
             }
             else{

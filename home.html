@@ -15,8 +15,8 @@
     <nav id="box1">
         <ul>
             <li class="odd" style="font-size: x-large; border-bottom: transparent; box-shadow: none; z-index: 99;"><a href="home.html">Home</a></li>
-            <li class="even"><a href="2.html">2</a></li>
-            <li class="odd"><a href="3.html">3</a></li>
+            <li class="even"><a href="2.html">Kolhydrater</a></li>
+            <li class="odd"><a href="3.html">Koffein</a></li>
             <li class="even"><a href="4.html">4</a></li>
             <li class="even"><a href="5.html">5</a></li>
             <li class="odd"><a href="6.html">6</a></li>
@@ -27,19 +27,40 @@
     </nav>        
     <nav id="side-nav">
         <div id="menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
+        <i class="fa-solid fa-moon"><input type="button" onclick="darkmode()" style="background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;"></i>
         <!-- <div><input type="text" id="search"><input type="button" value="search" id="searchButton" onclick="search()" style="width: 60px; cursor: pointer;"></div> -->
         <div id="logout"><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logga ut</a></div>
     </nav>
     <div id="box2">
         <div id="content"></div> 
         <div id="content1">
-            <div id="item1"></div>
-            <div id="item2"><span>or Vendetta spås det en dystopisk framtid för Storbritannien under 1990-talet. Serien skildrar en sorts postapokalyptisk värld där stora delar av världen har förstörts genom kärnvapenkrig, men där de flesta skador i Storbritannien har skett via översvämningar och missväxt. I denna framtid har det fascistiska och totalitära partiet Nordmannaelden tagit kontrollen över landet, som de styr som en polisstat, och de har utrotat sina motståndare i koncentrationsläger. V, som är anarkistisk revolutionär klädd i en Guy Fawkes-mask, utarbetar en våldsam och teatralisk kampanj för att mörda sina tidigare fångvaktare, få bort den sittande regeringen och få folket i Storbritannien att bli självstyrande.
-            Guy Fawkes-masken som V bär har ökat i popularitet bland allmänheten i och med att internet-/hackargruppen Anonymous år 2008 började använda sig av masken. ► Läs mer</span></div>
+            <div id="item1">
+            <img src="https://a.cdn-hotels.com/gdcs/production158/d1338/46e255f4-b521-49c8-ad73-5f62b264efa6.jpg" usemap="#image-map" style="width: 100%; border-radius: 20px;">
+                <map name="image-map">
+                    <area target="" alt="kaffe" title="kaffe" href="3.html" coords="624,189,968,587" shape="rect">
+                    <area target="" alt="bulle" title="bulle" href="2.html" coords="317,4,392" shape="circle">
+                    <area target="" alt="bulle" title="bulle" href="2.html" coords="1590,9,1079,341" shape="0">
+                    <area target="" alt="bulle" title="bulle" href="2.html" coords="506,756,170" shape="circle">
+                    <area target="" alt="bulle" title="bulle" href="2.html" coords="107,579,120" shape="circle">
+                    <area target="" alt="sirap" title="sirap" href="2.html" coords="1261,458,135" shape="circle">
+                </map>
+            </div>
         </div>
     </div>
 </body>
 <script>
+    //darkmode 
+    function darkmode(){
+        root.style.setProperty("--bacground1", "#333333")
+        root.style.setProperty("--bacground2", "#333333")
+    }
+
     //side menu
     $(document).ready(function(){
     $("#menu1").click(function(){

@@ -1,5 +1,11 @@
+:root{
+    --background1: #ffffff;
+    --background2:rgb(231, 231, 231);
+}
+
+
 body{
-    background-color: rgb(231, 231, 231);
+    background-color: var(--background2);
     padding: 0%;
     margin: 0%;
     /* overflow: hidden; */
@@ -151,13 +157,13 @@ ul li a {
 
 
 #side-nav{
-    background-color: rgb(231, 231, 231);
+    background-color: var(--background2);
     position: fixed;
     right: -201px;
     top: 0;
     height: 100%;
     width: 200px;
-    z-index: 2;
+    z-index: 99;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -165,6 +171,7 @@ ul li a {
     white-space: nowrap; 
     text-overflow: ellipsis;
     border-left: solid black 1px;
+
 }
     
 
@@ -192,19 +199,21 @@ i{
 }
 
 #content1{
-    display: grid;
+    display: flex;
     grid-template-columns: auto auto auto;
     margin: 30px;
     gap: 20px;
 }
 
 #item1{
-    width: 400px;
-    height: 400px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    
     border: solid  rgb(124, 0, 0) 4px;
     border-radius: 25px;
     grid-column-start: 1;
-    grid-column-end: 2;
 }
 
 #item2{

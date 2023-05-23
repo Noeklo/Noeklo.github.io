@@ -29,6 +29,7 @@
         var user = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         if (password == localStorage.getItem(user)){
+            alert("Inloggning lyckades!")
             window.location.href = "home.html";
         }
         else{
