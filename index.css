@@ -25,7 +25,7 @@ body{
     font-size: 18px;
     border: solid black 1px;
     background-color: rgb(114, 170, 255);
-    color: white;
+    color: --background1;
     cursor: pointer;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.4) 1.95px 1.95px 2.6px;
@@ -116,7 +116,7 @@ ul li {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     float: left;
-    background-color: white;
+    background-color: --background1;
     transform: skew(12deg);
     position: relative;
 }
@@ -144,7 +144,7 @@ ul li a {
 #box2 {
     box-shadow: 0px 8px 6px -6px;
     border-top: solid black 2px;
-    background-color: white;
+    background-color: --background1;
     overflow-y: hidden;
     height: 1000px;
     box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.23);
@@ -239,7 +239,7 @@ i{
 
 input[type="button"]{
     background-color: rgb(114, 170, 255);
-    color: white;
+    color: --background1;
     border: transparent;
 }
 
