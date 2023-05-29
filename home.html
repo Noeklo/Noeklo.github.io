@@ -56,6 +56,9 @@
 <script>
     //varibles    
     var r = document.querySelector(":root");
+    var t = document.querySelectorAll('input[type="text"]');
+    var p = document.querySelectorAll('input[type="password"]');
+
 
    //Load color mode
     $(document).ready(function(){
@@ -64,6 +67,8 @@
                 r.style.setProperty("--background1", "#333333");
                 r.style.setProperty("--background2", "#333333");
                 r.style.setProperty("--color", "#ffffff");
+                t.forEach(changeToBlack);
+                p.forEach(changeToBlack);
                 localStorage.setItem("mode", "dark");
             }
             else if (localStorage.getItem("mode").trim() == "light"){
@@ -75,6 +80,9 @@
         }
     });  
 
+    function changeToBlack(item){
+        item.style.backgroundColor = "#333333"
+    }
     // change color 
     function darkmode(){
         var rootStyles = getComputedStyle(r);

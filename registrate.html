@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1d58182547.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Registrering</title>
@@ -20,6 +25,38 @@
     </div> 
 </body>
 <script>
+    //varibles    
+    var r = document.querySelector(":root");
+    var t = document.querySelectorAll('input[type="text"]');
+    var p = document.querySelectorAll('input[type="password"]');
+
+
+
+   //Load color mode
+    $(document).ready(function(){
+        if (localStorage.getItem("mode") != null){
+            if (localStorage.getItem("mode").trim() == "dark"){
+                r.style.setProperty("--background1", "#333333");
+                r.style.setProperty("--background2", "#333333");
+                r.style.setProperty("--color", "#ffffff");
+                t.forEach(changeToBlack);
+                p.forEach(changeToBlack);
+                localStorage.setItem("mode", "dark");
+            }
+            else if (localStorage.getItem("mode").trim() == "light"){
+                r.style.setProperty("--background1", "#ffffff");
+                r.style.setProperty("--background2", "rgb(231, 231, 231)");
+                r.style.setProperty("--color", "black");
+                localStorage.setItem("mode", "light");
+            }
+        }
+    });  
+
+    function changeToBlack(item){
+        item.style.backgroundColor = "#333333"
+    }
+
+
     function RedirectToLoggin(){
         window.location.href = "index.html";
     }
