@@ -1,11 +1,13 @@
 :root{
     --background1: #ffffff;
     --background2:rgb(231, 231, 231);
+    --color: black;
 }
 
 
 body{
     background-color: var(--background2);
+    color: var(--color);
     padding: 0%;
     margin: 0%;
     /* overflow: hidden; */
@@ -25,7 +27,11 @@ body{
     font-size: 18px;
     border: solid black 1px;
     background-color: rgb(114, 170, 255);
+<<<<<<< HEAD
     color: --background1;
+=======
+    color: var(--background1);
+>>>>>>> bff90822fc6d504fc96fa678b527d00220dd830a
     cursor: pointer;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.4) 1.95px 1.95px 2.6px;
@@ -41,6 +47,7 @@ a{
 }
 
 nav {
+    color: var(--color);
     background-color: transparent;
     overflow: hidden;
     position: relative;
@@ -51,6 +58,7 @@ nav {
 }
 
 ul {
+    color: var(--color);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -116,14 +124,18 @@ ul li {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     float: left;
+<<<<<<< HEAD
     background-color: --background1;
+=======
+    background-color: var(--background1);
+>>>>>>> bff90822fc6d504fc96fa678b527d00220dd830a
     transform: skew(12deg);
     position: relative;
 }
 
 ul li a {
     text-decoration: none;
-    color: black;
+    color: var(--color);
 }
 
 
@@ -144,7 +156,11 @@ ul li a {
 #box2 {
     box-shadow: 0px 8px 6px -6px;
     border-top: solid black 2px;
+<<<<<<< HEAD
     background-color: --background1;
+=======
+    background-color: var(--background1);
+>>>>>>> bff90822fc6d504fc96fa678b527d00220dd830a
     overflow-y: hidden;
     height: 1000px;
     box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.23);
@@ -189,7 +205,7 @@ ul li a {
 
 
 i{
-    color: black;
+    color: var(--color);
     font-size: larger;
 }
 
@@ -223,7 +239,7 @@ i{
 }
 /* inloggning */
 #login_box1 {
-    background-color: white;
+    background-color: var(--background1);
     width: 400px;
     margin: auto;
     margin-top: 150px;
@@ -239,7 +255,11 @@ i{
 
 input[type="button"]{
     background-color: rgb(114, 170, 255);
+<<<<<<< HEAD
     color: --background1;
+=======
+    color: var(--background1);
+>>>>>>> bff90822fc6d504fc96fa678b527d00220dd830a
     border: transparent;
 }
 

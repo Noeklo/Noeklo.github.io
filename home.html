@@ -1,5 +1,8 @@
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1d58182547.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,13 +30,9 @@
     </nav>        
     <nav id="side-nav">
         <div id="menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
-        <i class="fa-solid fa-moon"><input type="button" onclick="darkmode()" style="background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;"></i>
+        <a href="#" onclick="darkmode()"><i class="fa-solid fa-moon"></i></a>
+        
+
         <!-- <div><input type="text" id="search"><input type="button" value="search" id="searchButton" onclick="search()" style="width: 60px; cursor: pointer;"></div> -->
         <div id="logout"><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logga ut</a></div>
     </nav>
@@ -55,10 +54,44 @@
     </div>
 </body>
 <script>
-    //darkmode 
+    //varibles    
+    var r = document.querySelector(":root");
+
+   //Load color mode
+    $(document).ready(function(){
+        if (localStorage.getItem("mode") != null){
+            if (localStorage.getItem("mode").trim() == "dark"){
+                r.style.setProperty("--background1", "#333333");
+                r.style.setProperty("--background2", "#333333");
+                r.style.setProperty("--color", "#ffffff");
+                localStorage.setItem("mode", "dark");
+            }
+            else if (localStorage.getItem("mode").trim() == "light"){
+                r.style.setProperty("--background1", "#ffffff");
+                r.style.setProperty("--background2", "rgb(231, 231, 231)");
+                r.style.setProperty("--color", "black");
+                localStorage.setItem("mode", "light");
+            }
+        }
+    });  
+
+    // change color 
     function darkmode(){
-        root.style.setProperty("--bacground1", "#333333")
-        root.style.setProperty("--bacground2", "#333333")
+        var rootStyles = getComputedStyle(r);
+        var background1 = rootStyles.getPropertyValue("--background1");
+        var background2 = rootStyles.getPropertyValue("--background2");
+        if (background1.trim() == "#ffffff"){
+            r.style.setProperty("--background1", "#333333");
+            r.style.setProperty("--background2", "#333333");
+            r.style.setProperty("--color", "#ffffff");
+            localStorage.setItem("mode", "dark");
+        }
+        else{
+            r.style.setProperty("--background1", "#ffffff");
+            r.style.setProperty("--background2", "rgb(231, 231, 231)");
+            r.style.setProperty("--color", "black");
+            localStorage.setItem("mode", "light");
+        }
     }
 
     //side menu
