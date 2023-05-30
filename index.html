@@ -45,6 +45,8 @@
                 r.style.setProperty("--background1", "#ffffff");
                 r.style.setProperty("--background2", "rgb(231, 231, 231)");
                 r.style.setProperty("--color", "black");
+                t.forEach(changeToLight);
+                p.forEach(changeToLight);
                 localStorage.setItem("mode", "light");
             }
         }
@@ -52,8 +54,13 @@
 
     function changeToBlack(item){
         item.style.backgroundColor = "#333333"
+        item.style.color = "#ffffff"
     }
 
+    function changeToLight(item){
+        item.style.backgroundColor = "#ffffff"
+        item.style.color = "#000000"
+    }
     function RedirectToRegistrate(){
         window.location.href = "registrate.html";
     }

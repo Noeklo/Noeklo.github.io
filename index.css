@@ -213,8 +213,6 @@ i{
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-    
     border: solid  rgb(124, 0, 0) 4px;
     border-radius: 25px;
     grid-column-start: 1;

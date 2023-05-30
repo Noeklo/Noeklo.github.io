@@ -4,6 +4,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1d58182547.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -40,8 +41,8 @@
         <div id="content"></div> 
         <div id="content1">
             <div id="item1">
-            <img src="https://a.cdn-hotels.com/gdcs/production158/d1338/46e255f4-b521-49c8-ad73-5f62b264efa6.jpg" usemap="#image-map" style="width: 100%; border-radius: 20px;">
-                <map name="image-map">
+            <img src="https://a.cdn-hotels.com/gdcs/production158/d1338/46e255f4-b521-49c8-ad73-5f62b264efa6.jpg" class="img-responsive" usemap="#usemap" style="width: 100%; border-radius: 20px;">
+                <map id="usemap" jname="usemap">
                     <area target="" alt="kaffe" title="kaffe" href="3.html" coords="624,189,968,587" shape="rect">
                     <area target="" alt="bulle" title="bulle" href="2.html" coords="317,4,392" shape="circle">
                     <area target="" alt="bulle" title="bulle" href="2.html" coords="1590,9,1079,341" shape="0">
@@ -75,6 +76,8 @@
                 r.style.setProperty("--background1", "#ffffff");
                 r.style.setProperty("--background2", "rgb(231, 231, 231)");
                 r.style.setProperty("--color", "black");
+                t.forEach(changeToLight);
+                p.forEach(changeToLight);
                 localStorage.setItem("mode", "light");
             }
         }
@@ -82,6 +85,12 @@
 
     function changeToBlack(item){
         item.style.backgroundColor = "#333333"
+        item.style.color = "#ffffff"
+    }
+
+    function changeToLight(item){
+        item.style.backgroundColor = "#ffffff"
+        item.style.color = "#000000"
     }
     // change color 
     function darkmode(){
@@ -158,6 +167,13 @@
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 
+
+
+
+
+    $(document).ready(function(){
+        $('img[usemap]').rwdImageMaps();
+    });  
 
 </script>
 </html>
