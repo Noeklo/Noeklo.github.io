@@ -58,13 +58,14 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 80%;
+    width: 100%;
     background-color: transparent;
     margin-left: 2%;
     padding-left: 5px;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
+    z-index: 100;
 }
 
 /* ul li {
@@ -79,6 +80,11 @@ ul {
     transform: skew(12deg);
     position: relative;
 } */
+ul li{
+    flex-basis: 150px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
 ul li:nth-child(2){
     transform: translate(-6%) skew(12deg);
     z-index: 98;
@@ -112,44 +118,6 @@ ul li:nth-child(9) {
     z-index: 91;
 }
 
-@media (max-width: 400px){
-
-
-    ul li:nth-child(2){
-        transform: translate(-6*1%) skew(12deg);
-        z-index: 98;     
-        background-color: red;        
-    }                            
-    ul li:nth-child(3) {         
-        transform: translate(-6*2%) skew(12deg);
-        z-index: 97;             
-    }                            
-    ul li:nth-child(4) {         
-        transform: translate(-6*3%) skew(12deg);
-        z-index: 96;             
-    }                            
-    ul li:nth-child(5) {         
-        transform: translate(-6*4%) skew(12deg);
-        z-index: 95;             
-    }                            
-    ul li:nth-child(6) {         
-        transform: translate(-6*5%) skew(12deg);
-        z-index: 94;             
-    }                            
-    ul li:nth-child(7) {         
-        transform: translate(-6*6%) skew(12deg);
-        z-index: 93;             
-    }                            
-    ul li:nth-child(8) {         
-        transform: translate(-6*7%) skew(12deg);
-        z-index: 92;             
-    }                            
-    ul li:nth-child(9) {         
-        transform: translate(-6*8%) skew(12deg);
-        z-index: 91;
-    }
-
-}
 
 ul li {
     display: inline-block;
@@ -306,4 +274,77 @@ h2{
 
 #error{
     color: red;
+}
+
+@media all and (max-width: 1100px){
+
+    ul li:nth-child(2){
+        transform: translate(-40px) skew(12deg);
+        z-index: 98;     
+        background-color: blue;
+    }                         
+    ul li:nth-child(3) {      
+        transform: translate(-80px) skew(12deg);
+        z-index: 97;          
+    }                         
+    ul li:nth-child(4) {      
+        transform: translate(-120px) skew(12deg);
+        z-index: 96;          
+    }                         
+    ul li:nth-child(5) {      
+        transform: translate(-160px) skew(12deg);
+        z-index: 95;          
+    }                         
+    ul li:nth-child(6) {      
+        transform: translate(-200px) skew(12deg);
+        z-index: 94;          
+    }                         
+    ul li:nth-child(7) {      
+        transform: translate(-240px) skew(12deg);
+        z-index: 93;          
+    }                         
+    ul li:nth-child(8) {      
+        transform: translate(-280px) skew(12deg);
+        z-index: 92;          
+    }                         
+    ul li:nth-child(9) {      
+        transform: translate(-320px) skew(12deg);
+        z-index: 91;
+    }
+}
+@media all and (max-width: 900px){
+
+    ul li:nth-child(2){
+        transform: translate(-80px) skew(12deg);
+        z-index: 98;     
+        background-color: red;
+    }                         
+    ul li:nth-child(3) {      
+        transform: translate(-160px) skew(12deg);
+        z-index: 97;          
+    }                         
+    ul li:nth-child(4) {      
+        transform: translate(-240px) skew(12deg);
+        z-index: 96;          
+    }                         
+    ul li:nth-child(5) {      
+        transform: translate(-320px) skew(12deg);
+        z-index: 95;          
+    }                         
+    ul li:nth-child(6) {      
+        transform: translate(-400px) skew(12deg);
+        z-index: 94;          
+    }                         
+    ul li:nth-child(7) {      
+        transform: translate(-480px) skew(12deg);
+        z-index: 93;          
+    }                         
+    ul li:nth-child(8) {      
+        transform: translate(-560px) skew(12deg);
+        z-index: 92;          
+    }                         
+    ul li:nth-child(9) {      
+        transform: translate(-640px) skew(12deg);
+        z-index: 91;
+    }
 }
