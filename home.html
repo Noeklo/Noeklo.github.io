@@ -18,7 +18,7 @@
 
     <nav id="box1">
         <ul>
-            <li class="odd" style="font-size: x-large; border-bottom: transparent; box-shadow: none; z-index: 99;"><a href="home.html">Home</a></li>
+            <li class="odd" style="font-size: x-large; border-bottom: transparent; box-shadow: none; z-index: 99;text-align: center;"><a href="home.html">Home</a></li>
             <li class="even"><a href="2.html">Kolhydrater</a></li>
             <li class="odd"><a href="3.html">Koffein</a></li>
             <li class="even"><a href="4.html">kasfjs</a></li>
@@ -41,7 +41,33 @@
         <div id="content"></div> 
         <div id="content1">
             <div id="item1">
-            <img src="https://a.cdn-hotels.com/gdcs/production158/d1338/46e255f4-b521-49c8-ad73-5f62b264efa6.jpg" class="img-responsive" usemap="#usemap" style="width: 100%; border-radius: 20px;">
+
+
+
+    <figure id="projectsvg">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" preserveAspectRatio="xMinYMin meet">
+
+        <!-- set your background image -->
+        <image width="1920" height="1080" xlink:href="http://placehold.it/1920x1080" />
+
+        <!-- create the regions -->
+        <g class="hover_group" opacity="0">
+        <a xlink:href="https://example.com/link1.html">
+            <text x="652" y="706.9" font-size="20">First zone</text>
+            <rect x="572" y="324.1" opacity="0.2" fill="#FFFFFF" width="264.6" height="387.8"></rect>
+        </a>
+        </g>
+        <g class="hover_group" opacity="0">
+        <a xlink:href="https://example.com/link2.html">
+            <text x="1230.7" y="952" font-size="20">Second zone</text>
+            <rect x="1081.7" y="507" opacity="0.2" fill="#FFFFFF" width="390.2" height="450"></rect>
+        </a>
+        </g>
+    </svg>
+    </figure>
+
+
+            <img src="https://a.cdn-hotels.com/gdcs/production158/d1338/46e255f4-b521-49c8-ad73-5f62b264efa6.jpg" class="img-responsive" usemap="#usemap" style="width: 100%; border-radius: 20px; ">
                 <map id="usemap" jname="usemap">
                     <area target="" alt="kaffe" title="kaffe" href="3.html" coords="624,189,968,587" shape="rect">
                     <area target="" alt="bulle" title="bulle" href="2.html" coords="317,4,392" shape="circle">
@@ -66,7 +92,7 @@
         if (localStorage.getItem("mode") != null){
             if (localStorage.getItem("mode").trim() == "dark"){
                 r.style.setProperty("--background1", "#333333");
-                r.style.setProperty("--background2", "#333333");
+                r.style.setProperty("--background2", "#292929");
                 r.style.setProperty("--color", "#ffffff");
                 t.forEach(changeToBlack);
                 p.forEach(changeToBlack);
@@ -99,7 +125,7 @@
         var background2 = rootStyles.getPropertyValue("--background2");
         if (background1.trim() == "#ffffff"){
             r.style.setProperty("--background1", "#333333");
-            r.style.setProperty("--background2", "#333333");
+            r.style.setProperty("--background2", "#292929");
             r.style.setProperty("--color", "#ffffff");
             localStorage.setItem("mode", "dark");
         }
