@@ -219,6 +219,8 @@ i{
 #item1{
     margin-top: 0;
     margin-left: auto;
+    width: 80%;
+    padding: 0;
     margin-right: auto;
     border: solid  rgb(124, 0, 0) 4px;
     border-radius: 25px;
@@ -278,6 +280,7 @@ h2{
 
 @media all and (max-width: 1050px){
     ul li{
+        text-align: end;
         flex-basis: 127px;
         flex-grow: 0;
         flex-shrink: 0;
@@ -325,7 +328,6 @@ h2{
         flex-shrink: 0;
     }
 
-
     ul li:nth-child(2){
         transform: translate(-80px) skew(12deg);
         z-index: 98;     
@@ -359,4 +361,24 @@ h2{
         transform: translate(-640px) skew(12deg);
         z-index: 91;
     }
+}
+.hover_group:hover {
+  opacity: 1;
+}
+
+#projectsvg {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56%;
+  vertical-align: middle;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#projectsvg svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
