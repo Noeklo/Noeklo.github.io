@@ -1,8 +1,11 @@
 
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1d58182547.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -11,26 +14,109 @@
     <title>Noels Sida</title>
 </head>
 <body>
+
+    <button onclick="topFunction()" id="myBtn">Back to Top</button>
+
     <nav id="box1">
         <ul>
-            <li class="odd"><a href="home.html">Home</a></li>
-            <li class="even"><a href="2.html">2</a></li>
-            <li class="odd"style="font-size: x-large; border-bottom: transparent; box-shadow: none; "><a href="3.html">3</a></li>
-            <li class="even"><a href="4.html">4</a></li>
+            <li  ><a href="home.html">Home</a></li>
+            <li ><a href="2.html">Kolhydrater</a></li>
+            <li style="font-size: x-large; border-bottom: transparent; box-shadow: none; z-index: 99;text-align: center;"><a href="3.html">Koffein</a></li>
+            <li ><a href="4.html">Glukos</a></li>
+            <li ><a href="5.html">Sackaros</a></li>
+            <li ><a href="6.html">Stärkelse</a></li>
+            <li ><a href="7.html">Koksalt</a></li>
         </ul>
 
         <div id="menu1" class="menu"><a href="#" onclick="openNav()"><i class="fa-solid fa-bars" ></i></a></div>
     </nav>        
     <nav id="side-nav">
-        <div id="menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
+        <div id = "menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
+        <form id="form1">
+            <a href="#" style="margin: 0; padding: 0;"><i class="fas fa-search" ></i></a>
+            <input id="search" type="text" onkeyup="Search()"  style="width: 150px;" placeholder="search">
+            <div id="list">
+                <div href="home.html">Hem</div>
+                <div href="2.html">Kolhydrater</div>
+                <div href="3.html">Koffein</div>
+                <div href="4.html">Glukos</div>
+                <div href="5.html">Sackaros</div>
+                <div href="6.html">Stärkelse</div>
+                <div href="7.html">Koksalt</div>
+            </div>
+
+        </form>
+        <a href="#" onclick="darkmode()"><i class="fa-solid fa-moon"></i></a>
         <div id="logout"><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logga ut</a></div>
     </nav>
     <div id="box2">
-       <div id="content"></div> 
-       <div id="content2"></div>
+        <div id="content"></div> 
+        <div id="content1">
+        </div>
     </div>
 </body>
 <script>
+    //varibles 
+    var r = document.querySelector(":root");
+    var t = document.querySelectorAll('input[type="text"]');
+    var p = document.querySelectorAll('input[type="password"]');
+
+
+   //Load color mode
+    $(document).ready(function(){
+        if (localStorage.getItem("mode") != null){
+            if (localStorage.getItem("mode").trim() == "dark"){
+                r.style.setProperty("--background1", "#333333");
+                r.style.setProperty("--background2", "#292929");
+                r.style.setProperty("--color", "#ffffff");
+                t.forEach(changeToBlack);
+                p.forEach(changeToBlack);
+                localStorage.setItem("mode", "dark");
+            }
+            else if (localStorage.getItem("mode").trim() == "light"){
+                r.style.setProperty("--background1", "#ffffff");
+                r.style.setProperty("--background2", "rgb(231, 231, 231)");
+                r.style.setProperty("--color", "black");
+                t.forEach(changeToLight);
+                p.forEach(changeToLight);
+                localStorage.setItem("mode", "light");
+            }
+        }
+    });  
+
+    function changeToBlack(item){
+        item.style.backgroundColor = "#333333"
+        item.style.color = "#ffffff"
+    }
+
+    function changeToLight(item){
+        item.style.backgroundColor = "#ffffff"
+        item.style.color = "#000000"
+    }
+    // change color 
+    function darkmode(){
+        var rootStyles = getComputedStyle(r);
+        var background1 = rootStyles.getPropertyValue("--background1");
+        var background2 = rootStyles.getPropertyValue("--background2");
+        if (background1.trim() == "#ffffff"){
+            r.style.setProperty("--background1", "#333333");
+            r.style.setProperty("--background2", "#292929");
+            r.style.setProperty("--color", "#ffffff");
+            t.forEach(changeToBlack);
+            p.forEach(changeToBlack);
+            localStorage.setItem("mode", "dark");
+        }
+        else{
+            r.style.setProperty("--background1", "#ffffff");
+            r.style.setProperty("--background2", "rgb(231, 231, 231)");
+            r.style.setProperty("--color", "black");
+            t.forEach(changeToLight);
+            p.forEach(changeToLight);
+            localStorage.setItem("mode", "light");
+        }
+    }
+
+    //side menu animation
     $(document).ready(function(){
     $("#menu1").click(function(){
         $("#side-nav").animate({right: '0px'}, 200);
@@ -41,5 +127,43 @@
         $("#side-nav").animate({right: '-201px'}, 200);
     });
     });  
+
+    //search function
+    var text;
+    const Elements = document.querySelectorAll('#list > div');
+
+    function Search(){
+        text = document.getElementById("search").value.toLowerCase();
+        Elements.forEach(Match);
+    }
+
+    function Match(element){
+       if (!element.innerHTML.toLowerCase().includes(text)) {
+            element.style.display = "none";
+       }
+       else{
+            element.style.display = "";
+       }
+
+    }
+    
+    // back to top button
+    var mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 45 || document.documentElement.scrollTop > 45) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
 </script>
 </html>

@@ -209,7 +209,6 @@ ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--color);
 }
 
 #list div{
@@ -225,6 +224,12 @@ ul li a {
     font-weight: bold;
     height: 40px;
     background-color: var(--background1);
+}
+
+#list div a{
+    text-decoration: none;
+    color: var(--color);
+    padding: 45px;
 }
 
 
@@ -253,7 +258,7 @@ i{
     gap: 20px;
 }
 
-#item1{
+#figure{
     margin-top: 0;
     margin-left: auto;
     width: 80%;
@@ -264,11 +269,7 @@ i{
     grid-column-start: 1;
 }
 
-#item2{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    border: solid black 2px;
-}
+
 /* inloggning */
 #login_box1 {
     background-color: var(--background1);
@@ -313,6 +314,25 @@ h2{
 
 #error{
     color: red;
+}
+#projectsvg {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56%;
+  vertical-align: middle;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#projectsvg svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ul li:nth-child(1){
+    z-index: 99;
 }
 
 @media all and (max-width: 1050px){
@@ -359,7 +379,91 @@ h2{
 }
 @media all and (max-width: 765px){
     ul li{
+        flex-basis: 115;
+        text-align: end;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    ul li:nth-child(2){
+        transform: translate(-60px) skew(12deg);
+        z-index: 98;     
+        background-color: red;
+    }                         
+    ul li:nth-child(3) {      
+        transform: translate(-120px) skew(12deg);
+        z-index: 97;          
+    }                         
+    ul li:nth-child(4) {      
+        transform: translate(-180px) skew(12deg);
+        z-index: 96;          
+    }                         
+    ul li:nth-child(5) {      
+        transform: translate(-240px) skew(12deg);
+        z-index: 95;          
+    }                         
+    ul li:nth-child(6) {      
+        transform: translate(-300px) skew(12deg);
+        z-index: 94;          
+    }                         
+    ul li:nth-child(7) {      
+        transform: translate(-360px) skew(12deg);
+        z-index: 93;          
+    }                         
+    ul li:nth-child(8) {      
+        transform: translate(-420px) skew(12deg);
+        z-index: 92;          
+    }                         
+    ul li:nth-child(9) {      
+        transform: translate(-480px) skew(12deg);
+        z-index: 91;
+    }
+}
+@media all and (max-width: 650px){
+    ul li{
         flex-basis: 115px;
+        text-align: end;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    ul li:nth-child(2){
+        transform: translate(-70px) skew(12deg);
+        z-index: 98;     
+        background-color: red;
+    }                         
+    ul li:nth-child(3) {      
+        transform: translate(-140px) skew(12deg);
+        z-index: 97;          
+    }                         
+    ul li:nth-child(4) {      
+        transform: translate(-210px) skew(12deg);
+        z-index: 96;          
+    }                         
+    ul li:nth-child(5) {      
+        transform: translate(-280px) skew(12deg);
+        z-index: 95;          
+    }                         
+    ul li:nth-child(6) {      
+        transform: translate(-350px) skew(12deg);
+        z-index: 94;          
+    }                         
+    ul li:nth-child(7) {      
+        transform: translate(-420px) skew(12deg);
+        z-index: 93;          
+    }                         
+    ul li:nth-child(8) {      
+        transform: translate(-490px) skew(12deg);
+        z-index: 92;          
+    }                         
+    ul li:nth-child(9) {      
+        transform: translate(-560px) skew(12deg);
+        z-index: 91;
+    }
+}
+@media all and (max-width: 480px){
+    ul li{
+        flex-basis: 80px;
         text-align: end;
         flex-grow: 0;
         flex-shrink: 0;
@@ -398,24 +502,4 @@ h2{
         transform: translate(-640px) skew(12deg);
         z-index: 91;
     }
-}
-.hover_group:hover {
-  opacity: 1;
-}
-
-#projectsvg {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56%;
-  vertical-align: middle;
-  margin: 0;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-#projectsvg svg {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
 }

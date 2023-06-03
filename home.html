@@ -14,17 +14,17 @@
 </head>
 <body>
 
-    <button onclick="topFunction()" id="myBtn">Back to Top</button>
+    <button onclick="topFunction()" id="myBtn">Tillbaka till toppen</button>
 
     <nav id="box1">
         <ul>
             <li  style="font-size: x-large; border-bottom: transparent; box-shadow: none; z-index: 99;text-align: center;"><a href="home.html">Home</a></li>
             <li ><a href="2.html">Kolhydrater</a></li>
             <li ><a href="3.html">Koffein</a></li>
-            <li ><a href="4.html">kasfjs</a></li>
-            <li ><a href="5.html">adlkdfjasdl</a></li>
-            <li ><a href="6.html">kasdfjasöd</a></li>
-            <li ><a href="7.html">adfasG</a></li>
+            <li ><a href="4.html">Glukos</a></li>
+            <li ><a href="5.html">Sackaros</a></li>
+            <li ><a href="6.html">Stärkelse</a></li>
+            <li ><a href="7.html">Koksalt</a></li>
         </ul>
 
         <div id="menu1" class="menu"><a href="#" onclick="openNav()"><i class="fa-solid fa-bars" ></i></a></div>
@@ -32,11 +32,16 @@
     <nav id="side-nav">
         <div id = "menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
         <form id="form1">
-            <a href="#" style="margin: 0; padding: 0;"><i class="fas fa-search" ></i></a>
+            <a  style="margin: 0; padding: 0;"><i class="fas fa-search" ></i></a>
             <input id="search" type="text" onkeyup="Search()"  style="width: 150px;" placeholder="search">
             <div id="list">
-                <div id="Kolhydrater" class="listItem" href="2.html">Kolhydrater</div>
-                <div id="Koffein" class="listItem" href="3.html">Koffein</div>
+                <div><a href="home.html">Hem</a></div>
+                <div><a href="2.html">Kolhydrater</a></div>
+                <div><a href="3.html">Koffein</a></div>
+                <div><a href="4.html">Glukos</a></div>
+                <div><a href="5.html">Sackaros</a></div>
+                <div><a href="6.html">Stärkelse</a></div>
+                <div><a href="7.html">Koksalt</a></div>
             </div>
 
         </form>
@@ -46,7 +51,7 @@
     <div id="box2">
         <div id="content"></div> 
         <div id="content1">
-            <div id="item1">
+            <div id="figure">
                 <figure id="projectsvg">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1066"preserveAspectRatio="xMinYMin meet">
 
@@ -104,7 +109,6 @@
 
 
    //Load color mode
-    $(document).ready(function(){
         if (localStorage.getItem("mode") != null){
             if (localStorage.getItem("mode").trim() == "dark"){
                 r.style.setProperty("--background1", "#333333");
@@ -123,7 +127,6 @@
                 localStorage.setItem("mode", "light");
             }
         }
-    });  
 
     function changeToBlack(item){
         item.style.backgroundColor = "#333333"
