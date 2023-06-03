@@ -18,24 +18,25 @@
 
     <nav id="box1">
         <ul>
-            <li class="odd" style="font-size: x-large; border-bottom: transparent; box-shadow: none; z-index: 99;text-align: center;"><a href="home.html">Home</a></li>
-            <li class="even"><a href="2.html">Kolhydrater</a></li>
-            <li class="odd"><a href="3.html">Koffein</a></li>
-            <li class="even"><a href="4.html">kasfjs</a></li>
-            <li class="even"><a href="5.html">adlkdfjasdl</a></li>
-            <li class="odd"><a href="6.html">kasdfjasöd</a></li>
-            <li class="even"><a href="7.html">adfasG</a></li>
+            <li  style="font-size: x-large; border-bottom: transparent; box-shadow: none; z-index: 99;text-align: center;"><a href="home.html">Home</a></li>
+            <li ><a href="2.html">Kolhydrater</a></li>
+            <li ><a href="3.html">Koffein</a></li>
+            <li ><a href="4.html">kasfjs</a></li>
+            <li ><a href="5.html">adlkdfjasdl</a></li>
+            <li ><a href="6.html">kasdfjasöd</a></li>
+            <li ><a href="7.html">adfasG</a></li>
         </ul>
 
         <div id="menu1" class="menu"><a href="#" onclick="openNav()"><i class="fa-solid fa-bars" ></i></a></div>
     </nav>        
     <nav id="side-nav">
-        <div id="menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
-        <form style="justify-content: ;">
-            <i class="fas fa-search"></i>
-            <input type="text" style="width: 150px;" placeholder="search">
+        <div id = "menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
+        <form id="form1">
+            <a href="#" style="margin: 0; padding: 0;"><i class="fas fa-search" ></i></a>
+            <input id="search" type="text" onkeyup="Search()"  style="width: 150px;" placeholder="search">
             <div id="list">
-                
+                <div id="Kolhydrater" class="listItem" href="2.html">Kolhydrater</div>
+                <div id="Koffein" class="listItem" href="3.html">Koffein</div>
             </div>
 
         </form>
@@ -156,7 +157,7 @@
         }
     }
 
-    //side menu
+    //side menu animation
     $(document).ready(function(){
     $("#menu1").click(function(){
         $("#side-nav").animate({right: '0px'}, 200);
@@ -167,6 +168,25 @@
         $("#side-nav").animate({right: '-201px'}, 200);
     });
     });  
+
+    //search function
+    var text;
+    const Elements = document.querySelectorAll('#list > div');
+
+    function Search(){
+        text = document.getElementById("search").value.toLowerCase();
+        Elements.forEach(Match);
+    }
+
+    function Match(element){
+       if (!element.innerHTML.toLowerCase().includes(text)) {
+            element.style.display = "none";
+       }
+       else{
+            element.style.display = "";
+       }
+
+    }
     
     // back to top button
     var mybutton = document.getElementById("myBtn");

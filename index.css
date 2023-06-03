@@ -66,6 +66,7 @@ ul {
     overflow: hidden;
     display: flex;
     align-items: flex-end;
+    border-bottom: transparent;
 }
 
 /* ul li {
@@ -85,6 +86,14 @@ ul li{
     flex-grow: 0;
     flex-shrink: 0;
 }
+
+ul li a{
+    margin: 0;
+    padding: 2px;
+    display: block;
+    transform: skew(-12deg);
+}
+
 ul li:nth-child(2){
     transform: translate(-6%) skew(12deg);
     z-index: 98;
@@ -141,15 +150,20 @@ ul li a {
 .menu{
     height: 30px;
     width: 40px;
+    margin-bottom: auto;
     margin-right: 15px;
     margin-top: 10px;
-    margin-bottom: auto;
     margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
+#menu2{
+    margin-bottom: 0;
+}
+
 
 
 #box2 {
@@ -184,7 +198,35 @@ ul li a {
     border-left: solid black 1px;
 
 }
-    
+
+#form1{
+    height: auto;
+    margin-left: 10px;
+    height: 100%;
+}
+
+#list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color);
+}
+
+#list div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid black 1px;
+    border-radius: 5px;
+    width: auto;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    height: 40px;
+    background-color: var(--background1);
+}
+
 
 #logout{
     float: left;
@@ -192,11 +234,6 @@ ul li a {
     flex-wrap: nowrap;
 
 }
-
-/* #side-nav{
-    border: solid transparent;
-    transition: 0;
-} */
 
 
 i{
