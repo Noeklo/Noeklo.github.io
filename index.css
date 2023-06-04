@@ -229,7 +229,8 @@ ul li a {
 #list div a{
     text-decoration: none;
     color: var(--color);
-    padding: 45px;
+    padding-left: 53px;
+    padding-right: 53px;
 }
 
 
@@ -256,6 +257,19 @@ i{
     grid-template-columns: auto auto auto;
     margin: 30px;
     gap: 20px;
+}
+
+#content2{
+    display: grid;
+    grid-template-columns: auto auto ;
+    margin: 30px;
+    gap: 20px;
+}
+
+#content2 div{
+    border: solid  rgb(124, 0, 0) 4px;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 #figure{
@@ -346,7 +360,6 @@ ul li:nth-child(1){
     ul li:nth-child(2){
         transform: translate(-40px) skew(12deg);
         z-index: 98;     
-        background-color: blue;
     }                         
     ul li:nth-child(3) {      
         transform: translate(-80px) skew(12deg);
@@ -388,7 +401,6 @@ ul li:nth-child(1){
     ul li:nth-child(2){
         transform: translate(-60px) skew(12deg);
         z-index: 98;     
-        background-color: red;
     }                         
     ul li:nth-child(3) {      
         transform: translate(-120px) skew(12deg);
@@ -430,7 +442,6 @@ ul li:nth-child(1){
     ul li:nth-child(2){
         transform: translate(-70px) skew(12deg);
         z-index: 98;     
-        background-color: red;
     }                         
     ul li:nth-child(3) {      
         transform: translate(-140px) skew(12deg);
@@ -463,43 +474,41 @@ ul li:nth-child(1){
 }
 @media all and (max-width: 480px){
     ul li{
-        flex-basis: 80px;
+        flex-basis: 70px;
         text-align: end;
         flex-grow: 0;
         flex-shrink: 0;
     }
-
     ul li:nth-child(2){
-        transform: translate(-80px) skew(12deg);
+        transform: translate(-40px) skew(12deg);
         z-index: 98;     
-        background-color: red;
     }                         
     ul li:nth-child(3) {      
-        transform: translate(-160px) skew(12deg);
+        transform: translate(-80px) skew(12deg);
         z-index: 97;          
     }                         
     ul li:nth-child(4) {      
-        transform: translate(-240px) skew(12deg);
+        transform: translate(-120px) skew(12deg);
         z-index: 96;          
     }                         
     ul li:nth-child(5) {      
-        transform: translate(-320px) skew(12deg);
+        transform: translate(-160px) skew(12deg);
         z-index: 95;          
     }                         
     ul li:nth-child(6) {      
-        transform: translate(-400px) skew(12deg);
+        transform: translate(-200px) skew(12deg);
         z-index: 94;          
     }                         
     ul li:nth-child(7) {      
-        transform: translate(-480px) skew(12deg);
+        transform: translate(-240px) skew(12deg);
         z-index: 93;          
     }                         
     ul li:nth-child(8) {      
-        transform: translate(-560px) skew(12deg);
+        transform: translate(-280px) skew(12deg);
         z-index: 92;          
     }                         
     ul li:nth-child(9) {      
-        transform: translate(-640px) skew(12deg);
+        transform: translate(-320px) skew(12deg);
         z-index: 91;
     }
 }

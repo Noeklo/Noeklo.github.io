@@ -1,4 +1,5 @@
 
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +15,15 @@
 </head>
 <body>
 
-    <button onclick="topFunction()" id="myBtn">Back to Top</button>
+    <button onclick="topFunction()" id="myBtn">Tillbaka till toppen</button>
 
     <nav id="box1">
         <ul>
-            <li  ><a href="home.html">Home</a></li>
+            <li ><a href="home.html">Home</a></li>
             <li ><a href="2.html">Kolhydrater</a></li>
             <li ><a href="3.html">Koffein</a></li>
             <li ><a href="4.html">Glukos</a></li>
-            <li style="font-size: x-large; border-bottom: transparent; box-shadow: none; z-index: 99;text-align: center;"><a href="5.html">Sackaros</a></li>
+            <li ><a href="5.html">Sackaros</a></li>
             <li ><a href="6.html">Stärkelse</a></li>
             <li ><a href="7.html">Koksalt</a></li>
         </ul>
@@ -32,8 +33,10 @@
     <nav id="side-nav">
         <div id = "menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
         <form id="form1">
-            <a href="#" style="margin: 0; padding: 0;"><i class="fas fa-search" ></i></a>
-            <input id="search" type="text" onkeyup="Search()"  style="width: 150px;" placeholder="search">
+            <div style="display: flex; justify-content: end; ">
+                <label for="search" style="margin-top: 15px;"><i class="fas fa-search" ></i></label>
+                <input id="search" name="search" type="text" onkeyup="Search()"  style="width: 150px; " placeholder="search">
+            </div>
             <div id="list">
                 <div><a href="home.html">Hem</a></div>
                 <div><a href="2.html">Kolhydrater</a></div>
@@ -50,8 +53,29 @@
     </nav>
     <div id="box2">
         <div id="content"></div> 
-        <div id="content1">
+        <div id="content2">
+            <div>
+                <h2>Sackaros</h2>
+                <span>
+                    Sackaros eller sukros, med trivialnamnen rörsocker och betsocker, är en sockerart som utvinns från sockerrör och sockerbetor. Sackaros är en disackarid som består av de två monosackaridresterna glukos och fruktos. Det är den sockerart som bland annat finns i strösocker, bitsocker och florsocker. Ren sackaros brukar kallas för tomma kalorier/kolhydrater, då det bidrar med energi men saknar övrigt näringsinnehåll såsom vitaminer och mineralämnen. Sackaros tas upp långsammare av kroppen än till exempel glukos (druvsocker).
+                </span>
+            </div>
+            <div>
+                <h2>Historia</h2>
+                <span>
+                    Sockerröret härstammar från ett gräs som växte i Polynesien och Melanesien i Stilla havet. Därifrån togs det till Indien, Indonesien och Kina cirka 6 000 f.kr..[1] Gräset förädlades till sockerrör ur vilka sackarosen pressades ur eller reducerades till kristaller genom kokning. Enligt en legend var det Alexander den store som på 300-talet f.kr. tog sockerröret till Europa. Under den islamiska expansionen tog araberna sockerröret till Västeuropa via Sicilien och Spanien och Henrik sjöfararen förde grödan söderut på 1400-talet. När Columbus reste till Amerika insåg han att klimatet i västindien var väl lämpat för sockerodling. Dessa odlingar blev en del av den så kallade triangelhandeln; slavar köptes i Afrika och skeppades till Västindien och södra USA där de utvann råvaror som förädlades i Europa och byttes till slavar i Afrika. Dessutom upptäckte sockerproducenterna att biprodukten melass kunde jäsas och destilleras vilket gav upphov till spritdrycken rom.
+                    Under napoleonkrigen i början av 1800-talet försvårades importen av råsocker från sockerrör från Västindien och som ersättning utvanns sackaros ur sockerbetan. När freden kom behövdes inte betan längre, men på 1850-talet hade dels slaveriet avskaffats, vilket fördyrade odlingen av socker, och sockerbetan förädlats så mycket att odling av denna åter blev lönsamt.[1]
+                    Från slutet av 1900-talet står sockerbetan för nästan hälften av det sackaros som framställs.[1]
+                </span>
+            </div>
+            <div>
+                <h2>De svenska trivialnamnen</h2>
+                <span>
+I Sverige utvanns sackaros ur importerat råsocker från sockerrör. Under napoleonkrigen upptäcktes att sackaros kunde utvinnas ur sockerbetan.[1] Sockerbetan kunde odlas på Sveriges breddgrader men oraffinerat socker, råsocker, importerades fortfarande. Därför kom råsocker att bli synonymt med rörsocker.[källa behövs] Företaget Dansukker, som är marknadsledande i Sverige för socker, döpte år 2009 om sin produkt Råsocker till Rörsocker.[2]
+                </span>
+            </div>
         </div>
+
     </div>
 </body>
 <script>
@@ -62,7 +86,6 @@
 
 
    //Load color mode
-    $(document).ready(function(){
         if (localStorage.getItem("mode") != null){
             if (localStorage.getItem("mode").trim() == "dark"){
                 r.style.setProperty("--background1", "#333333");
@@ -81,7 +104,6 @@
                 localStorage.setItem("mode", "light");
             }
         }
-    });  
 
     function changeToBlack(item){
         item.style.backgroundColor = "#333333"

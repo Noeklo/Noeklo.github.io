@@ -32,8 +32,10 @@
     <nav id="side-nav">
         <div id = "menu2"class="menu"><a href="#" onclick="closeNav()"><i class="fa-solid fa-bars" ></i></a></div>
         <form id="form1">
-            <a  style="margin: 0; padding: 0;"><i class="fas fa-search" ></i></a>
-            <input id="search" type="text" onkeyup="Search()"  style="width: 150px;" placeholder="search">
+            <div style="display: flex; justify-content: end; ">
+                <label for="search" style="margin-top: 15px;"><i class="fas fa-search" ></i></label>
+                <input id="search" name="search" type="text" onkeyup="Search()"  style="width: 150px; " placeholder="search">
+            </div>
             <div id="list">
                 <div><a href="home.html">Hem</a></div>
                 <div><a href="2.html">Kolhydrater</a></div>
@@ -50,7 +52,7 @@
     </nav>
     <div id="box2">
         <div id="content"></div> 
-        <div id="content1">
+        <div id="content1" style="display: flex;">
             <div id="figure">
                 <figure id="projectsvg">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1066"preserveAspectRatio="xMinYMin meet">
