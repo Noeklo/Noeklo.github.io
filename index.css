@@ -69,18 +69,6 @@ ul {
     border-bottom: transparent;
 }
 
-/* ul li {
-    display: inline-block;
-    text-align: center;
-    width: 100px;
-    border: solid black 2px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    float: left;
-    background-color: white;
-    transform: skew(12deg);
-    position: relative;
-} */
 ul li{
     flex-basis: 140px;
     flex-grow: 0;
